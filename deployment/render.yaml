@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: eventflow-backend
+    env: node
+    buildCommand: "npm install"
+    startCommand: "node backend/app.js"
+    envVars:
+      - key: DB_URL
+        value: postgres://user:password@localhost:5432/eventflow
+      - key: JWT_SECRET
+        value: supersecretkey
+        
